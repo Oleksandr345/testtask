@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zero Limits — Cosmic Experience</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap');
@@ -20,7 +20,7 @@
       background: black;
     }
 
-    /* Відеофон */
+    /* Background video */
     .video-bg {
       position: fixed;
       top: 0;
@@ -32,7 +32,7 @@
       filter: brightness(0.6) saturate(1.3);
     }
 
-    /* Головний блок */
+    /* Hero section */
     .hero {
       height: 100vh;
       display: flex;
@@ -64,7 +64,7 @@
       animation-delay: 0.8s;
     }
 
-    /* Прокручувані секції */
+    /* Scroll sections */
     section {
       min-height: 100vh;
       display: flex;
@@ -114,41 +114,42 @@
 </head>
 <body>
 
-  <!-- Відеофон -->
+  <!-- Background video -->
   <video autoplay muted loop playsinline class="video-bg">
-    <source src="https://cdn.pixabay.com/vimeo/252413798/space-12114.mp4?width=640&hash=a9c948e9d4a6df5f1a24c53d03312b204964ca4e" type="video/mp4">
+    <source src="https://cdn.pixabay.com/vimeo/252413798/space-12114.mp4?width=640&hash=a9c948e9d4a6df5f1a24c53d03312b204964ca4e" type="video/mp4" />
   </video>
 
-  <!-- Hero секція -->
+  <!-- Hero Section -->
   <div class="hero">
     <h1>Zero Limits</h1>
-    <p>Відчуй енергію безмежності. Космос, світло і рух — злиті в одному досвіді.</p>
+    <p>Experience the energy of infinity — where space, light, and motion merge into one cinematic flow.</p>
   </div>
 
-  <!-- Секція 2 -->
+  <!-- Section 2 -->
   <section>
-    <h2>Кінематографічна атмосфера</h2>
-    <p>Ми замінили 3D-анімацію на живий відеофон космосу, який створює ефект занурення та руху. Прокрутка плавно відкриває нові фрагменти історії.</p>
+    <h2>Cinematic Atmosphere</h2>
+    <p>We replaced the original 3D animation with a living cosmic video background that creates depth and motion. Scrolling reveals each new layer of the story.</p>
   </section>
 
-  <!-- Секція 3 -->
+  <!-- Section 3 -->
   <section>
-    <h2>Синхронізація зі скролом</h2>
-    <p>Елементи з’являються у міру прокручування — ефекти fade та move створюють глибину, а фонове відео додає відчуття енергії.</p>
+    <h2>Scroll-Driven Motion</h2>
+    <p>Elements fade and move in sync with scrolling. Combined with the background video, this produces a feeling of immersive energy and endless space.</p>
   </section>
 
-  <!-- Секція 4 -->
+  <!-- Section 4 -->
   <section>
-    <h2>Без обмежень</h2>
-    <p>Цей сайт демонструє можливість створити кінематографічний ефект навіть без складних 3D-сцен — лише за допомогою HTML, CSS і JavaScript.</p>
+    <h2>Beyond Boundaries</h2>
+    <p>This project demonstrates how a cinematic, immersive experience can be built without complex 3D scenes — using only HTML, CSS, and JavaScript.</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    © 2025 Cosmic Zero Limits Experience — створено для Front-End Developer Trial Task
+    © 2025 Cosmic Zero Limits Experience — Built for Front-End Developer Trial Task
   </footer>
 
   <script>
-    // Плавна поява секцій при скролі
+    // Smooth section fade-in on scroll
     const sections = document.querySelectorAll('section');
     const options = { threshold: 0.3 };
 
