@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zero Limits | Cosmic Experience</title>
+  <title>Zero Limits | Cosmic Parallax Experience</title>
   <style>
     html, body {
       margin: 0;
@@ -24,6 +24,7 @@
       height: 100%;
       display: block;
       z-index: 1;
+      transition: transform 0.3s ease-out;
     }
 
     .content {
@@ -31,6 +32,7 @@
       z-index: 2;
       top: 45%;
       transform: translateY(-50%);
+      transition: transform 0.3s ease-out;
     }
 
     h1 {
@@ -61,7 +63,7 @@
 </head>
 <body>
   <canvas id="space"></canvas>
-  <div class="content">
+  <div class="content" id="textLayer">
     <h1>ZERO LIMITS</h1>
     <p>Beyond Imagination</p>
   </div>
@@ -69,9 +71,12 @@
   <script>
     const canvas = document.getElementById("space");
     const ctx = canvas.getContext("2d");
+    const textLayer = document.getElementById("textLayer");
+
     let particlesArray = [];
     const numParticles = 200;
     let w, h;
+    let mouseX = 0, mouseY = 0;
 
     function init() {
       resizeCanvas();
@@ -134,6 +139,15 @@
         }
       }
     }
+
+    // Parallax effect based on mouse movement
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+
+      canvas.style.transform = `translate(${x * 40}px, ${y * 40}px) scale(1.05)`;
+      textLayer.style.transform = `translate(${x * -30}px, ${y * -30}px)`;
+    });
 
     window.addEventListener("resize", init);
     init();
